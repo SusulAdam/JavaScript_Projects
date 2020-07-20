@@ -33,7 +33,9 @@ const prepareDOMElements = () => {
 }
 
 const prepareDOMEvents = () => {
-    $addBtn.addEventListener('click', addNewTask)
+    $addBtn.addEventListener('click', addNewTask);
+    $ulList.addEventListener('click', checkClick);
+    $closeTodoBtn.addEventListener('click', closePopup);
 }
 
 
@@ -66,10 +68,28 @@ const createToolsArea = () => {
     toolsPanel.appendChild(editBtn);
 
     const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('todo__delte');
+    deleteBtn.classList.add('todo__delete');
     deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
     toolsPanel.appendChild(deleteBtn);
+}
 
+const checkClick = (e) => {
+    if (e.target.closest('button').classList.contains('todo__complete')) {
+        e.target.closest('li').classList.toggle('todo__completed');
+        e.target.closest('button').classList.toggle('todo__completed');
+    } else if (e.target.closest('button').classList.contains('todo__edit')) {
+        editTask();
+    } else if (e.target.closest('button').classList.contains('todo__delete')) {
+        console.log('remove');
+    }
+}
+
+const editTask = () => {
+    $popup.style.display = 'flex';
+}
+
+const closePopup = () => {
+    $popup.style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', main)

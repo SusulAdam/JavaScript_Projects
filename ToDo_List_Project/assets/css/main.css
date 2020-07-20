@@ -54,6 +54,7 @@
 }
 
 .todo .todo__main .todo__top .todo__top--btn {
+  padding: 0;
   height: 30px;
   width: 60px;
   border: solid rgba(255, 166, 0, 0.8);
@@ -114,31 +115,6 @@
 .todo .todo__main .todo__list li .todo__tools {
   display: inline-block;
   outline: none;
-}
-
-.todo .todo__main .todo__list li .todo__tools button {
-  padding: 15px 10px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-}
-
-.todo .todo__main .todo__list li .todo__tools button:hover {
-  background-color: #41c420;
-}
-
-.todo .todo__main .todo__list li .todo__tools .todo__complete {
-  color: green;
-}
-
-.todo .todo__main .todo__list li .todo__tools .todo__delete {
-  color: red;
-}
-
-.todo .todo__main .todo__list li .todo__tools .todo__edit {
-  color: black;
 }
 
 .todo .todo__popup {
@@ -212,9 +188,35 @@
   background-color: #0fd64f;
 }
 
+button {
+  padding: 15px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  outline: none;
+}
+
+button:hover {
+  background-color: #41c420;
+}
+
+.todo__complete {
+  color: green;
+}
+
+.todo__delete {
+  color: red;
+}
+
+.todo__edit {
+  color: black;
+}
+
 .todo__completed {
   font-size: 12px;
-  color: red;
+  color: black;
   text-decoration: line-through;
   font-style: italic;
 }
