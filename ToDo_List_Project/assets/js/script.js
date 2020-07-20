@@ -10,7 +10,7 @@ let $popupInput;
 let $addPopupBtn;
 let $closeTodoBtn;
 let $idNumber = 0;
-let $allTask;
+let $allTasks;
 
 
 const main = () => {
@@ -29,20 +29,30 @@ const prepareDOMElements = () => {
     $popupInput = document.querySelector('.todo__popup-main--input');
     $addPopupBtn = document.querySelector('.accept');
     $closeTodoBtn = document.querySelector('.cancel');
-    $allTask = $ulList.getElementsByTagName('li');
+    $allTasks = $ulList.getElementsByTagName('li');
+
 }
 
 const prepareDOMEvents = () => {
     $addBtn.addEventListener('click', addNewTask);
     $ulList.addEventListener('click', checkClick);
     $closeTodoBtn.addEventListener('click', closePopup);
+    $addPopupBtn.addEventListener('click', changeTodo);
+    $todoInput.addEventListener('keyup', enterChceck)
 }
 
+const enterChceck = () => {
+    if (event.keyCode === 13) {
+        addNewTask()
+    }
+}
 
 const addNewTask = () => {
     if ($todoInput.value !== '') {
+        $idNumber++;
         $newTask = document.createElement('li');
         $newTask.innerText = $todoInput.value;
+        $newTask.setAttribute('id', `todo-${$idNumber}`)
         $ulList.appendChild($newTask);
         $todoInput.value = ""
         $alertInfo.innerText = ""
@@ -78,19 +88,43 @@ const checkClick = (e) => {
         e.target.closest('li').classList.toggle('todo__completed');
         e.target.closest('button').classList.toggle('todo__completed');
     } else if (e.target.closest('button').classList.contains('todo__edit')) {
-        editTask();
+        editTask(e);
     } else if (e.target.closest('button').classList.contains('todo__delete')) {
-        console.log('remove');
+        deleteTask(e);
     }
 }
 
-const editTask = () => {
+const editTask = (e) => {
+    const oldTodo = e.target.closest('li').id
+    $editedTodo = document.getElementById(oldTodo);
+    $popupInput.value = $editedTodo.firstChild.textContent;
     $popup.style.display = 'flex';
+}
+
+const changeTodo = () => {
+    if ($popupInput.value !== '') {
+        $editedTodo.firstChild.textContent = $popupInput.value
+        $popup.style.display = 'none';
+        $popupinfo.innerText = ""
+    } else {
+        $popupinfo.innerText = 'You need to write content!'
+    }
 }
 
 const closePopup = () => {
     $popup.style.display = 'none';
+    $popupinfo.innerText = ""
 }
 
+const deleteTask = (e) => {
+    const deleteTodo = e.target.closest('li')
+    deleteTodo.remove();
+    console.log()
+    if ($allTasks.length == 0) {
+        $alertInfo.innerText = 'There are no tasks in the list.';
+
+    }
+
+}
 document.addEventListener('DOMContentLoaded', main)
 
