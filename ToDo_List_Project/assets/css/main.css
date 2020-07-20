@@ -21,6 +21,7 @@
           flex-direction: column;
   position: relative;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .todo .todo__main {
@@ -66,7 +67,7 @@
 }
 
 .todo .todo__main .todo__top .todo__top--btn:hover {
-  background-color: #0fd64f;
+  color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -112,6 +113,7 @@
 
 .todo .todo__main .todo__list li .todo__tools {
   display: inline-block;
+  outline: none;
 }
 
 .todo .todo__main .todo__list li .todo__tools button {
