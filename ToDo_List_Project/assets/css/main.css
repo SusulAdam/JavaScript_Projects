@@ -59,6 +59,14 @@
   outline: none;
   cursor: pointer;
   border-radius: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.todo .todo__main .todo__top .todo__top--btn:hover {
+  background-color: #0fd64f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .todo .todo__main .todo__list {
@@ -68,5 +76,51 @@
 .todo .todo__main .todo__list .todo__list--h2 {
   text-transform: uppercase;
   margin-bottom: 16px;
+}
+
+.todo .todo__main .todo__list .todo__list--info {
+  margin-top: 20px;
+  color: #0084ff;
+}
+
+.todo .todo__main .todo__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+  padding-left: 20px;
+  text-align: left;
+  list-style: none;
+}
+
+.todo .todo__main .todo__list li .tools {
+  display: inline-block;
+}
+
+.todo .todo__main .todo__list li .tools button {
+  padding: 15px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.todo .todo__main .todo__list li .tools button:hover {
+  background-color: #000000;
+}
+
+.todo .todo__main .todo__list li .tools .complete {
+  color: green;
+}
+
+.todo .todo__main .todo__list li .tools .delete {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */

@@ -49,7 +49,15 @@
                 outline: none;
                 cursor: pointer;
                 border-radius: 30px;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #0fd64f;
+                    transition: 0.3s;
+                }
             }
+
+
 
         }
 
@@ -59,6 +67,47 @@
             .todo__list--h2 {
                 text-transform: uppercase;
                 margin-bottom: 16px;
+            }
+
+            .todo__list--info {
+                margin-top: 20px;
+                color: rgb(0, 132, 255);
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 15px;
+                padding-left: 20px;
+                text-align: left;
+                list-style: none;
+
+                .tools {
+                    display: inline-block;
+
+                    button {
+                        padding: 15px 10px;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        transition: background-color .3s;
+
+                        &:hover {
+                            background-color: #000000
+                        }
+                    }
+
+                    .complete {
+                        color: green
+                    }
+
+                    .delete {
+                        color: red;
+                    }
+
+
+                }
             }
         }
     }
