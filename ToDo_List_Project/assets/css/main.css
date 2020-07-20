@@ -61,6 +61,8 @@
   border-radius: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: #fdb813;
+  background-image: linear-gradient(315deg, #fdb813 0%, #788cb6 74%);
 }
 
 .todo .todo__main .todo__top .todo__top--btn:hover {
@@ -70,15 +72,19 @@
 }
 
 .todo .todo__main .todo__list {
+  margin-top: 10px;
   padding: 20px 0;
-  background-color: white;
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   overflow-y: auto;
   height: 350px;
+  border-radius: 50px;
 }
 
 .todo .todo__main .todo__list .todo__list--h2 {
   text-transform: uppercase;
   margin-bottom: 16px;
+  color: rgba(0, 26, 255, 0.877);
 }
 
 .todo .todo__main .todo__list .todo__list--info {
@@ -100,6 +106,8 @@
   padding-left: 20px;
   text-align: left;
   list-style: none;
+  border: solid rgba(255, 166, 0, 0.8);
+  background-color: #fff;
 }
 
 .todo .todo__main .todo__list li .todo__tools {
@@ -116,7 +124,7 @@
 }
 
 .todo .todo__main .todo__list li .todo__tools button:hover {
-  background-color: #000000;
+  background-color: #41c420;
 }
 
 .todo .todo__main .todo__list li .todo__tools .todo__complete {
@@ -127,17 +135,12 @@
   color: red;
 }
 
-.todo .todo__main .todo__list li .todo__tools .todo__completed {
-  font-size: 12px;
+.todo .todo__main .todo__list li .todo__tools .todo__edit {
   color: black;
-  text-decoration: line-through;
-  font-style: italic;
 }
 
 .todo .todo__popup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -149,15 +152,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #eefb34;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  overflow-y: auto;
   left: 50%;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .todo .todo__popup .todo__popup--h3 {
+  color: #0084ff;
   padding: 20px;
 }
 
@@ -179,7 +185,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: yellow;
+  border: solid rgba(255, 166, 0, 0.8);
 }
 
 .todo .todo__popup .todo__popup-main .todo__popup-main--btn {
@@ -190,15 +196,56 @@
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: red;
+  background-color: #fdb813;
+  background-image: linear-gradient(315deg, #fdb813 0%, #788cb6 74%);
   text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: color .3s, background-color .3s;
   transition: color .3s, background-color .3s;
+  border: solid rgba(255, 166, 0, 0.8);
 }
 
 .todo .todo__popup .todo__popup-main .todo__popup-main--btn:hover {
   color: #fff;
-  background-color: 0;
+  background-color: #0fd64f;
+}
+
+.todo__completed {
+  font-size: 12px;
+  color: red;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 50px;
+  background-color: #ccc;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=main.css.map */

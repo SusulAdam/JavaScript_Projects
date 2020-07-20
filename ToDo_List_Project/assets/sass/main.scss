@@ -50,26 +50,29 @@
                 cursor: pointer;
                 border-radius: 30px;
                 transition: 0.3s;
+                background-color: #fdb813;
+                background-image: linear-gradient(315deg, #fdb813 0%, #788cb6 74%);
 
                 &:hover {
                     background-color: #0fd64f;
                     transition: 0.3s;
                 }
             }
-
-
-
         }
 
         .todo__list {
+            margin-top: 10px;
             padding: 20px 0;
-            background-color: white;
+            background-color: #fbb034;
+            background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
             overflow-y: auto;
             height: 350px;
+            border-radius: 50px;
 
             .todo__list--h2 {
                 text-transform: uppercase;
                 margin-bottom: 16px;
+                color: rgba(0, 26, 255, 0.877);
             }
 
             .todo__list--info {
@@ -85,6 +88,8 @@
                 padding-left: 20px;
                 text-align: left;
                 list-style: none;
+                border: solid rgba($color: #ffa600, $alpha: 0.8);
+                background-color: #fff;
 
                 .todo__tools {
                     display: inline-block;
@@ -97,43 +102,53 @@
                         transition: background-color .3s;
 
                         &:hover {
-                            background-color: #000000
+                            background-color: #41c420
                         }
                     }
 
                     .todo__complete {
-                        color: green
+                        color: green;
+
+
                     }
+
+
 
                     .todo__delete {
                         color: red;
                     }
 
-                    .todo__completed {
-                        font-size: 12px;
-                        color: black;
-                        text-decoration: line-through;
-                        font-style: italic;
+                    .todo__edit {
+                        color: rgb(0, 0, 0);
+
+
                     }
+
+
+
+
+
                 }
             }
         }
     }
 
     .todo__popup {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: absolute;
-        bottom: 5%;
+        bottom: 0;
         transform: translate(-50%, -50%);
-        background-color: white;
-
+        background-color: #eefb34;
+        background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+        overflow-y: auto;
         left: 50%;
-        border-radius: 5px;
+        border-radius: 50px;
 
         .todo__popup--h3 {
+            color: rgb(0, 132, 255);
             padding: 20px;
         }
 
@@ -149,7 +164,7 @@
                 padding: 10px 20px;
                 border: none;
                 border-radius: 5px;
-                background-color: yellow;
+                border: solid rgba($color: #ffa600, $alpha: 0.8);
 
             }
 
@@ -161,14 +176,16 @@
                 border: none;
                 border-radius: 5px;
                 color: black;
-                background-color: red;
+                background-color: #fdb813;
+                background-image: linear-gradient(315deg, #fdb813 0%, #788cb6 74%);
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: color .3s, background-color .3s;
+                border: solid rgba($color: #ffa600, $alpha: 0.8);
 
                 &:hover {
                     color: #fff;
-                    background-color: green($color: #000000)
+                    background-color: #0fd64f
                 }
             }
 
@@ -180,4 +197,45 @@
 
 
 
+}
+
+.todo__completed {
+    font-size: 12px;
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #ccc;
+    border-radius: 3px;
 }
