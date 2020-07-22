@@ -1,5 +1,5 @@
 ## General info
-The repository contains to do list projekt.
+The repository contains to do list project.
 Project consist on add, edit and delete new tasks. 
 Project don't have data base.
 	
