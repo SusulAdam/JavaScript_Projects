@@ -1,12 +1,36 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
-  color: black;
+.slider {
+  text-align: center;
 }
-/*# sourceMappingURL=main.css.map */
+
+img {
+  vertical-align: middle;
+}
+
+.slider__container {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__numberText {
+  position: absolute;
+  top: 0;
+  padding: 8px 12px;
+  color: #f2f2f2;
+  font-size: 16px;
+}
+
+.slider__text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
