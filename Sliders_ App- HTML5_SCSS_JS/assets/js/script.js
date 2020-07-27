@@ -42,3 +42,7 @@ const showSlides = () => {
 
 showSlides();
 
+// Slider library
+
+
+
