@@ -9,10 +9,13 @@
 
 img {
   vertical-align: middle;
+  height: 500px;
+  width: 800px;
+
 }
 
 .slider__container {
-  max-width: 1000px;
+  max-width: 800px;
   position: relative;
   margin: 0 auto;
 }
@@ -30,7 +33,37 @@ img {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 50px;
   width: 100%;
   text-align: center;
+}
+
+.slider__dots-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.slider__dot {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  display: inline-block;
+
+}
+
+.slider__dots {
+  height: 11px;
+  width: 11px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
 }
