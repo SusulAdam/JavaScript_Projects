@@ -202,6 +202,11 @@ button:hover {
   background-color: #41c420;
 }
 
+span {
+  padding: 15px 10px;
+  font-size: 13.3px;
+}
+
 .todo__complete {
   color: green;
 }

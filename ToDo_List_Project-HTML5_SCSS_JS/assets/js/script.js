@@ -62,10 +62,30 @@ const addNewTask = () => {
     }
 }
 
+
+
 const createToolsArea = () => {
     const toolsPanel = document.createElement('div');
     toolsPanel.classList.add('todo__tool');
     $newTask.appendChild(toolsPanel)
+
+    const todoDate = document.createElement('span');
+    todoDate.classList.add('todo-element-bar');
+    const date = new Date();
+
+    function leadingZeroMounth(i) {
+        return (i < 9) ? "0" + (i + 1) : i;
+    }
+
+    function leadingZeroMinutesHours(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    const dateText = date.getDate() + '-' + leadingZeroMounth(date.getMonth()) + '-' + date.getFullYear() + ' godz.: '
+        + leadingZeroMinutesHours(date.getHours()) + ':' + leadingZeroMinutesHours(date.getMinutes());
+    todoDate.innerText = dateText;
+    toolsPanel.appendChild(todoDate);
+
 
     const completeBtn = document.createElement('button');
     completeBtn.classList.add('todo__complete');
@@ -81,6 +101,8 @@ const createToolsArea = () => {
     deleteBtn.classList.add('todo__delete');
     deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
     toolsPanel.appendChild(deleteBtn);
+
+
 }
 
 const checkClick = (e) => {
