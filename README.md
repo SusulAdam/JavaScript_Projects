@@ -7,4 +7,3 @@ Projects are created with:
 * CSS3
 * JS
 * SCSS
-* API
