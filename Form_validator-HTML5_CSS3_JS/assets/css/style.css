@@ -83,7 +83,7 @@ h1 {
 .validator__clear-btn:hover,
 .validator__send-btn:hover,
 .validator__popup--close-btn:hover {
-    background-color: rgba(189, 255, 0, 1);
+    background-color: rgba(138, 187, 0, 0.7);
 }
 
 .validator__popup {
