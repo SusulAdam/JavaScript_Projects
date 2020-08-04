@@ -58,3 +58,59 @@ h1 {
 .validator__form-box.error .validator__error-text {
     visibility: visible;
 }
+
+.validator__control-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.validator__clear-btn,
+.validator__send-btn,
+.validator__popup--close-btn {
+    display: block;
+    padding: 10px 0;
+    margin-left: 10px;
+    width: 100px;
+    font-size: 18px;
+    background-color: rgb(138, 187, 5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.validator__clear-btn:hover,
+.validator__send-btn:hover,
+.validator__popup--close-btn:hover {
+    background-color: rgba(189, 255, 0, 1);
+}
+
+.validator__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: top .5s;
+}
+
+.validator__popup p {
+    font-size: 28px;
+}
+
+.validator__popup--close-btn {
+    margin-top: 20px;
+}
+
+.validator__popup--show-popup {
+    top: 150px;
+}
