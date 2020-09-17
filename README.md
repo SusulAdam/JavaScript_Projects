@@ -1,5 +1,12 @@
 ## General info
-The repository contains javascript projects
+The repository contains small javascript projects like:
+
+* Form validator 
+* Slider without libraries
+* Slider with library
+
+
+They are in one repository, treated as a curiosity
 	
 ## Technologies
 Projects are created with:
