@@ -1,2 +1,3 @@
 *.scss linguist-language=JavScript
+*.Less linguist-language=JavScript
 *.css linguist-language=JavScript
